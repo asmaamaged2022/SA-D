@@ -125,3 +125,33 @@ nav {
     display: block;
     margin: auto;
   }
+
+.coming-soon {
+    width: 250px;
+    margin: 30px auto;
+    padding: 10px;
+
+    background-color: #220202;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    font-size: 14px;
+    font-weight: bold;
+
+    display: flex;         
+    justify-content: center;
+    align-items: center;    
+    box-sizing: border-box; 
+    overflow: hidden;       
+}
+
+.coming-soon:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.coming-soon p {
+    margin: 0;  
+    padding: 0;
+}
