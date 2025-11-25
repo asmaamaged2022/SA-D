@@ -127,34 +127,6 @@ body{
     color: #721111;
 } 
 
-
-  .price-and-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.card-price {
-    font-size: 22px;
-    font-weight: 700;
-    color: #721111;
-}
-.brief-btn{
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    background-color: #fff;
-    color: #721111;
-    border: #721111 solid 2px;
-    margin: 5px 0 2px;
-    display: block;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-.brief-btn:active{
-    transform: scale(0.9);
-}
 .theme{
     width: 90px;
     height: 20px;
@@ -185,4 +157,41 @@ body{
 .coming-soon:hover {
     transform: scale(1.05);
     opacity: 0.9;
+}
+
+.card-price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #721111;
+}
+
+ .price-and-btn {
+    display: flex;
+    align-items: center; 
+    gap: 4px; 
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 3.5px;
+     color: #721111;
+}
+
+
+.brief-btn{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #721111;
+    border: #721111 solid 2px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-left: auto; 
+}
+
+.brief-btn:active{
+    transform: scale(0.9);
 }

@@ -24,6 +24,16 @@
             const themeLink = document.getElementById('theme-style');
             themeLink.href = (savedTheme === 'dark') ? 'dark.css' : 'styles.css';
         }
+
+        function toggleCart(el) {
+           if (el.textContent === "🛒") {
+              el.textContent = "✔";
+            } else {
+                el.textContent = "🛒";
+            }
+}
+
+
     </script>
 </head>
 <body>
@@ -62,7 +72,7 @@
                     <h3>Cappuccino</h3>
                     <p>Espresso with steamed milk and foam</p>
                     <span class="price">$4.50</span>
-                    <button class="favorite-btn">♡</button>
+                    <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                 </div>
             </div>
             
@@ -75,7 +85,7 @@
                     <h3>Latte</h3>
                     <p>Espresso with more steamed milk</p>
                     <span class="price">$5.00</span>
-                    <button class="favorite-btn">♡</button>
+                    <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                     
                 </div>
             </div>
@@ -89,7 +99,7 @@
                     <h3>Espresso</h3>
                     <p>Strong concentrated coffee</p>
                     <span class="price">$3.50</span>
-                    <button class="favorite-btn">♡</button>
+                    <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                 </div>
             </div>
             
@@ -102,7 +112,7 @@
                     <h3>Hot Chocolate</h3>
                     <p>Rich chocolate drink with cream</p>
                     <span class="price">$4.75</span>
-                    <button class="favorite-btn">♡</button>
+                    <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                 </div>
             </div>
             
@@ -115,7 +125,7 @@
                     <h3>Chai Latte</h3>
                     <p>Spiced tea with steamed milk</p>
                     <span class="price">$4.50</span>
-                    <button class="favorite-btn">♡</button>
+                    <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                 </div>
             </div>
             
@@ -128,7 +138,7 @@
                     <h3>Tea</h3>
                     <p>Selection of fine teas</p>
                     <span class="price">$3.25</span>
-                    <button class="favorite-btn">♡</button>
+                    <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                 </div>
             </div>
         </div>
@@ -151,7 +161,7 @@
                     <h3>Iced coffee</h3>
                     <p>Cold coffee with ice</p>
                     <span class="price">$6.00</span>
-                    <button class="favorite-btn">♡</button>
+                    <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                 </div>
             </div>
             
@@ -164,7 +174,7 @@
                     <h3>Milkshake</h3>
                     <p>Cold milk and ice cream mix</p>
                     <span class="price">$7.00</span>
-                    <button class="favorite-btn">♡</button>
+                    <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                 </div>
             </div>
             
@@ -177,7 +187,7 @@
                     <h3>Iced tea</h3>
                     <p>Chilled tea, sometimes with lemon or sugar</p>
                     <span class="price">$2.50</span>
-                    <button class="favorite-btn">♡</button>
+                    <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                 </div>
             </div>
             
@@ -190,7 +200,7 @@
                     <h3>Smoothie</h3>
                     <p>Blended cold fruits, sometimes with milk or yogurt</p>
                     <span class="price">$5.75</span>
-                    <button class="favorite-btn">♡</button>
+                    <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                 </div>
             </div>
             
@@ -203,7 +213,7 @@
                     <h3>Matcha</h3>
                     <p>Cold milk with matcha powder</p>
                     <span class="price">$5.5</span>
-                    <button class="favorite-btn">♡</button>
+                    <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                 </div>
             </div>
             
@@ -216,7 +226,7 @@
                     <h3>Mokhito</h3>
                     <p>Lime,mint,and soda over ice</p>
                     <span class="price">$4.25</span>
-                    <button class="favorite-btn">♡</button>
+                    <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                 </div>
             </div>
         </div>
@@ -227,13 +237,7 @@
         </div>
     
     <script>
-        // Heart code
-        document.querySelectorAll('.favorite-btn').forEach(btn => {
-          btn.addEventListener('click', function() {
-            this.classList.toggle('active');
-            this.textContent = this.classList.contains('active') ? '♥' : '♡';
-          });
-        });
+
         document.getElementById('searchInput').addEventListener('input', function() {
   const searchTerm = this.value.toLowerCase();
   const drinkCards = document.querySelectorAll('.drink-card');
