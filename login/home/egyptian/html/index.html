@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Egyptian Dishes</title>
+    <link id="theme-style" rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        function toggleTheme() {
+            const themeLink = document.getElementById('theme-style');
+            const currentTheme = themeLink.getAttribute('href');
+      
+            if (currentTheme === '../css/style.css') {
+                themeLink.href = '../css/dark.css';
+                localStorage.setItem('selectedTheme', 'dark');
+            } else {
+                themeLink.href = '../css/style.css';
+                localStorage.setItem('selectedTheme', 'light');
+            }
+        }
+      
+        window.onload = function () {
+            const savedTheme = localStorage.getItem('selectedTheme') || 'light';
+            const themeLink = document.getElementById('theme-style');
+            themeLink.href = (savedTheme === 'dark') ? '../css/dark.css' : '../css/style.css';
+        }
+      </script>
+    
+</head>
+<body>
+    <header>
+    <nav class ="navbar"> 
+        <p style="color: white;font-size: 25px;">Egyptian food</p>
+        <div class="dropdown">
+            <div class="hamburger">&#9776;</div>
+            <ul class="menu">
+              <li><a href="../../home.html">🍕Home</a></li>
+               <li><a href="../../payment/payment.html">🍜Payment</a></li>
+              <li><a href="../../contact_us/contact.html">🍕Contact Us</a></li>
+            </ul>
+          </div>
+
+    </nav>
+ </header>
+ <button class="theme" onclick="toggleTheme()" style="font-style: normal;">theme</button>
+    <h1 class="page-title">Egyptian dishes</h1>
+    <div class="container"> 
+            <ul class="card-list">
+                <li class="card-item">
+                    <img src="../images/Koshari.jpg" alt="Card Image" class="card-image">
+                    <p class="badge">Koshari</p>
+                    <div class="price-and-btn">
+                        <p class="card-price">Price: 2.50$</p>
+                        <button class="brief-btn">
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
+                        </button>
+                    </div>
+                    <h2 class="card-title"> Famous Egyptian street food made of layers with sauces on top.</h2>
+               
+      
+                </li>
+                <li class="card-item">
+                    <img src="../images/Mahshi.jpg" alt="Card Image" class="card-image">
+                    <p class="badge">Mahshi</p>
+                    <div class="price-and-btn">
+                        <p class="card-price">Price: 3$</p>
+                        <button class="brief-btn">
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
+                        </button>
+                    </div>
+                    <h2 class="card-title">Stuffed vegetables with herbed rice, cooked in tomato sauce. </h2>
+              
+                    <!-- <div>
+                        <button class="hearts-btn" onclick="addHeart()">Add to Favorites</button>
+                        </div>-->
+                       
+                </li>
+                <li class="card-item">
+                    <img src="../images/Fattah.jpg" alt="Card Image" class="card-image">
+                    <p class="badge">Fattah</p>
+                    <div class="price-and-btn">
+                        <p class="card-price">Price: 4.50$</p>
+                        <button class="brief-btn">
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
+                        </button>
+                    </div>
+                    <h2 class="card-title">Traditional dish with rice, bread, and meat in garlic vinegar sauce.</h2>
+               
+                    <!-- <div>
+                        <button class="hearts-btn" onclick="addHeart()">Add to Favorites</button>
+                        </div>-->
+                       
+     
+                </li>
+                <li class="card-item">
+                    <img src="../images/Molokhia.jpg" alt="Card Image" class="card-image">
+                    <p class="badge">Molokhia Soup</p>
+                    <div class="price-and-btn">
+                        <p class="card-price">Price: 2$</p>
+                        <button class="brief-btn">
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
+                        </button>
+                    </div>
+                    <h2 class="card-title">A green soup made with molokhia leaves, garlic, and coriander. </h2>
+                
+                    <!-- <div>
+                        <button class="hearts-btn" onclick="addHeart()">Add to Favorites</button>
+                    </div>-->
+                   
+                </li>
+                <li class="card-item">
+                    <img src="../images/Bamya.jpg" alt="Card Image" class="card-image">
+                    <p class="badge">Bamya</p>
+                    <div class="price-and-btn">
+                        <p class="card-price">Price: 3.50$</p>
+                        <button class="brief-btn">
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
+                        </button>
+                    </div>
+                    <h2 class="card-title">Okra stew with meat, tomatoes, and spices.</h2>
+               
+                    <!-- <div>
+                        <button class="hearts-btn" onclick="addHeart()">Add to Favorites</button>
+                    </div> -->
+                    
+                        
+                </li>
+                <li class="card-item">
+                    <img src="../images/FoulMedames.jpg" alt="Card Image" class="card-image">
+                    <p class="badge">Foul Medames</p>
+                    <div class="price-and-btn">
+                        <p class="card-price">Price: 1.80$</p>
+                        <button class="brief-btn">
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
+                        </button>
+                    </div>
+                    <h2 class="card-title">Fava beans stew with spices, served with bread.</h2> 
+            
+                    <!-- <div>
+                        <button class="hearts-btn" onclick="addHeart()">Add to Favorites</button>
+                    </div> -->
+                   
+                </li>   
+                <li class="card-item">
+                    <img src="../images/Hawawshi.jpg" alt="Card Image" class="card-image">
+                    <p class="badge">Hawawshi</p>
+                    <div class="price-and-btn">
+                        <p class="card-price">Price: 3.50$</p>
+                        <button class="brief-btn">
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
+                        </button>
+                    </div>
+                    <h2 class="card-title">Spiced minced meat stuffed in bread and baked or grilled.</h2>
+               
+                    <!-- <div>
+                        <button class="hearts-btn" onclick="addHeart()">Add to Favorites</button>
+                        </div>-->
+                        
+                </li>
+                <li class="card-item">
+                    <img src="../images/Fesikh.jpg" alt="Card Image" class="card-image">
+                    <p class="badge">Fesikh</p>
+                    <div class="price-and-btn">
+                        <p class="card-price">Price: 5$</p>
+                        <button class="brief-btn">
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
+                        </button>
+                    </div>
+                    <h2 class="card-title" >salted fish, often served with lemon and bread.</h2>
+                    
+                    
+                    <!-- <button class="hearts-btn" onclick="addHeart()">Add to Favorites</button>
+                    </div> -->
+                    
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const briefButtons = document.querySelectorAll('.brief-btn');
+
+  briefButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const cardItem = button.closest('.card-item');
+      const cardTitle = cardItem.querySelector('.card-title');
+      const icon = button.querySelector('.material-symbols-outlined');
+
+      if (cardTitle) {
+        if (cardTitle.style.display === 'none' || cardTitle.style.display === '') {
+          cardTitle.style.display = 'block';
+          icon.textContent = 'arrow_drop_up'; 
+        } else {
+          cardTitle.style.display = 'none';
+          icon.textContent = 'arrow_drop_down'; 
+        }
+      }
+    });
+  });
+}); 
+
+</script>
+    
+
+</body>
+</html>

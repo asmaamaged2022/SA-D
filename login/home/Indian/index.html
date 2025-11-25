@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Indian Foods</title>
+    <link id="theme-style" rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+   <script>
+      function toggleTheme() {
+          const themeLink = document.getElementById('theme-style');
+          const currentTheme = themeLink.getAttribute('href');
+
+          if (currentTheme === 'style.css') {
+              themeLink.href = 'indian_dark.css';
+              localStorage.setItem('selectedTheme', 'dark');
+          } else {
+              themeLink.href = 'style.css';
+              localStorage.setItem('selectedTheme', 'light');
+          }
+      }
+
+      window.onload = function () {
+          const savedTheme = localStorage.getItem('selectedTheme') || 'light';
+          const themeLink = document.getElementById('theme-style');
+          themeLink.href = (savedTheme === 'dark') ? 'indian_dark.css' : 'style.css';
+      }
+  </script>
+   <div class="container">
+      <div class="navbar">
+           <span style="color: white;"> Indian Foods</span>
+           <div class="dropdown">
+            <div class="hamburger">&#9776;</div>
+            <ul class="menu">
+              <li><a href="../home.html">Home</a></li>
+              <li><a href="../contact_us/contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+       </div>
+   </div>    
+   <button class="theme" onclick="toggleTheme()">theme</button>
+   <div class="main-content">
+      <div class="section1">
+         <div class="container0">
+           <img class="indian" src="images/Chicken Keema Masala Recipe.jpeg" onclick="showDescription('fork')">
+           <p id="fork" class="forks">
+            <br>Chicken Keema Masala 
+            <br>Small 20$
+            <br>Medium  30$
+            <br>Large 50$
+           </p>
+           
+              
+         </div>
+      </div>
+      
+  
+      <div class="section2">
+         <div class="container1">
+            <img class="indian" src="images/Creamy & Spiced Chicken Tikka Masala.jpeg" onclick="showDescription('spoon')">
+            <p id="spoon" class="spoons">
+               <br>Creamy & Spiced Chicken Tikka Masala
+               <br>Small  15$
+               <br>Medium 25$
+               <br>Large  40$
+            </p>
+         
+         </div>
+      </div>
+  
+   
+      <div class="section3">
+         <div class="container2">
+   
+             <img class="indian" src="images/Paneer pulao or paneer rice (1).jpeg" onclick="showDescription('dish')">
+             <p id="dish" class="dishes">
+               <br>Paneer pulao
+               <br> Small  10$
+               <br>Medium  25$
+               <br> Large  35$
+      
+             </p>
+           
+         
+         </div>   
+      </div>
+   
+      <div class="section4">
+         <div class="container3">
+              <img class="indian" src="images/Rogan Josh - Indian Food Photography.jpeg" onclick="showDescription('meal')">
+              <p id="meal" class="meals">
+               <br>Rogan Josh
+               <br>Small  15$
+               <br>Medium  30$
+               <br>Large   45$
+              </p>
+              
+         </div>
+       </div> 
+   
+      <div class="section5">
+         <div class="container4">
+             <img class="indian" src="images/foooo.jpeg" onclick="showDescription('food')">
+             <p id="food" class="foods">
+               <br>Chicken Tikka Masala
+               <br> Small  20$
+               <br> Medium  30$
+               <br> Large  40$
+             </p>
+         </div>
+      </div>
+   
+      <div class="section6">
+         <div class="container5">
+            <img class="indian" src="images/Crispy Masala Dosa.jpeg" onclick="showDescription('desc')">
+            <p id="desc" class="desc2">
+               <br> Crispy Masala dose
+               <br>Small    10$
+               <br>Medium   20$
+               <br>Large    30$
+            </p>
+
+            
+         </div>
+      </div> 
+    
+   </div>
+   <script>
+      function showDescription(id){
+         var desc = document.getElementById(id);
+         if(desc.style.display === "none" || desc.style.display === ""){
+            desc.style.display = "block";
+         } else {
+            desc.style.display = "none";
+         }
+      }
+      
+   </script>
+   
+   
+</body>
+</html>

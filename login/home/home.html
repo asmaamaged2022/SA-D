@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="theme-style" rel="stylesheet" href="css_home/light_home.css" />
+    <link rel="stylesheet" href="css_home/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>restaurant menu</title>
+    <script>
+      function toggleTheme() {
+        const themeLink = document.getElementById("theme-style");
+        const currentTheme = themeLink.getAttribute("href");
+
+        if (currentTheme === "css_home/light_home.css") {
+          themeLink.href = "css_home/dark_home.css";
+          localStorage.setItem("selectedTheme", "dark");
+        } else {
+          themeLink.href = "css_home/light_home.css";
+          localStorage.setItem("selectedTheme", "light");
+        }
+      }
+
+      window.onload = function () {
+        const savedTheme = localStorage.getItem("selectedTheme") || "light";
+        const themeLink = document.getElementById("theme-style");
+        themeLink.href =
+          savedTheme === "dark"
+            ? "css_home/dark_home.css"
+            : "css_home/light_home.css";
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="header">
+      <i class="fa-solid fa-utensils"></i>
+      <div class="container">
+        <div class="links">
+          <span class="icon">
+            <span></span>
+            <span class="span2"></span>
+            <span></span>
+          </span>
+          <ul>
+            <li><a href="contact_us/contact.html">🍕Contact us</a></li>
+            <li><a href="payment/payment.html">🍜Payment</a></li>
+            <li><a href="../log.html">🍕Log out</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="name">
+      <button class="theme" onclick="toggleTheme()">theme</button>
+
+      <h1>e-food</h1>
+      <p>Welcome To Our restaurant</p>
+    </div>
+    <div class="contan">
+      <div class="box">
+        <div>
+          <a href="egyptian/html/index.html" style="text-decoration: none">
+            <input class="sec1" type="button" value="Egyptian" />
+          </a>
+        </div>
+        <div>
+          <a href="Indian/index.html" style="text-decoration: none">
+            <input class="sec2" type="button" value="Indian" />
+          </a>
+        </div>
+        <div>
+          <a href="chinise/index.html" style="text-decoration: none">
+            <input class="sec3" type="button" value="Chinese" />
+          </a>
+        </div>
+        <div>
+          <a href="italian/index.html" style="text-decoration: none">
+            <input class="sec4" type="button" value="Italian" />
+          </a>
+        </div>
+        <div>
+          <a href="levant/levant index.html" style="text-decoration: none">
+            <input class="sec5" type="button" value="Levant" />
+          </a>
+        </div>
+        <div>
+          <a href="drink/index.html" style="text-decoration: none">
+            <input class="sec6" type="button" value="Drinks" />
+          </a>
+        </div>
+        <div>
+          <a href="dessert/HTMLagain.html" style="text-decoration: none">
+            <input class="sec7" type="button" value="Dessert" />
+          </a>
+        </div>
+      </div>
+      <div class="image">
+        <img id="main" src="images_home/photo_2025-04-14_05-52-04.jpg" alt="" />
+
+        <script>
+          let angle = 0;
+          const img = document.getElementById("main");
+
+          function rotate() {
+            angle += 0.5;
+            img.style.transform = `rotate(${angle}deg)`;
+            requestAnimationFrame(rotate);
+          }
+
+          rotate();
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  background-color: #f9e0e0;
+}
+.cont {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.theme {
+  width: 90px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #ac3030;
+  color: white;
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-bottom: 0;
+  justify-content: start;
+}
+input[type="button"] {
+  justify-content: end;
+  border: none;
+  outline: none;
+  height: 20px;
+  width: 90px;
+  font-size: 15px;
+  background: #ac3030;
+  color: white;
+  border-radius: 15px;
+  margin: 25px;
+  margin-right: 50px;
+  transition: 0.5s ease;
+}
+.cotanre {
+  width: 750px;
+  height: 500px;
+  padding: 0px 50px;
+  position: absolute;
+  border-radius: 120px ;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  background: rgba(201, 113, 113, 0.6);
+  overflow: hidden;          
+  transition: height 0.5s ease;
+
+}
+p {
+  color: #721111;
+  font-size: 45px;
+  padding: 0 240px;
+}
+.cotanre label {
+  color: #721111;
+  font-size: large;
+}
+
+.cotanre input,
+.cotanre button {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.cotanre input[type="text"],
+.cotanre input[type="tel"] ,
+.cotanre input[type="password"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: transparent;
+  color: #721111;
+  border-bottom: 1px solid white;
+  font-size: 18px;
+}
+.cotanre button,
+.cotanre input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  font-size: 18px;
+  background: #ac3030;
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  transition: 0.5s ease;
+}
+
+.cotanre button:hover {
+  transform: scale(1.1);
+}
+.visa {
+  display: none;
+}

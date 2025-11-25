@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link id="theme-style" rel="stylesheet" href="regist_css/light_regist.css">
+</head>
+
+<body>
+
+    <div class="cont">
+        <button class="theme" onclick="toggleTheme()">theme</button>
+        <input id="myButton" type="button" value="login">
+    </div>
+    <script>
+        document.getElementById("myButton").addEventListener("click", function () {
+            window.location.href = "login/log.html";
+        });
+    </script>
+
+
+    <script>
+        function toggleTheme() {
+            const themeLink = document.getElementById('theme-style');
+            const currentTheme = themeLink.getAttribute('href');
+
+            if (currentTheme === 'regist_css/light_regist.css') {
+                themeLink.href = 'regist_css/dark_regist.css';
+                localStorage.setItem('selectedTheme', 'dark');
+            } else {
+                themeLink.href = 'regist_css/light_regist.css';
+                localStorage.setItem('selectedTheme', 'light');
+            }
+        }
+
+        window.onload = function () {
+            const savedTheme = localStorage.getItem('selectedTheme') || 'light';
+            const themeLink = document.getElementById('theme-style');
+            themeLink.href = (savedTheme === 'dark') ? 'regist_css/dark_regist.css' : 'regist_css/light_regist.css';
+        }
+    </script>
+    <div class="box">
+        <h1>create new account</h1>
+        <form action="login/home/home.html">
+            <label>first name</label>
+            <input type="text" placeholder="enter your first name" required>
+            <label>second name</label>
+            <input type="text" placeholder="enter your second name" required>
+            <label>username</label>
+            <input type="text" placeholder="enter your username"required>
+            <label>password</label>
+            <input type="password" placeholder="enter your password"required>
+            <label>email</label>
+            <input type="email" placeholder="enter your email"required>
+            <input id="myButt" type="submit" value="create">
+
+
+        </form>
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>

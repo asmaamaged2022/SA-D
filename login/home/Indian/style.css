@@ -1,0 +1,172 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f9e0e0;
+    
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    height: 57px;
+    padding-top: 0;
+   
+   
+    background-color: #f9e0e0;
+    
+}
+.navbar{
+     background-color:#ac3030;
+     padding: 10px 30px;
+     font-size: 24px;
+     font-weight: bold;
+     color: aliceblue;
+     margin-top: 0;
+     font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    color:#220202;
+    box-shadow: 0 4px 8px;
+}
+.dropdown {
+    position: relative;
+  }
+
+  .hamburger {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  
+  .menu {
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: -3px;
+    padding: 0;
+    right: 10px;
+  }
+  
+  .menu li {
+    list-style: none;
+    font-size: 18px;
+  }
+  
+  .menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .menu li a:hover {
+    background: #ac3030;
+    color: white;
+  }
+  
+  .dropdown:hover .menu {
+    display:block;
+  }
+/*  */
+.main-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+    
+    
+   
+  
+}
+.section1,
+.section2,
+.section3,
+.section4,
+.section5,
+.section6 {
+    margin:50px 20px;
+    
+    width: 340px;
+    height: 250px;
+    border-radius:10px;
+    
+
+    
+
+}
+.indian{
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    position: relative;
+    bottom: 30px;
+    object-fit: cover;
+    
+    
+}
+.indian:hover{
+    transform: scale(1.1);
+}
+.container0,
+.container1,
+.container2,
+.container3,
+.container4,
+.container5
+{
+    margin: auto;
+    width: 90%;
+    
+
+    
+    
+}
+
+.indian{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  
+}
+.desc2,.foods,.meals,.dishes,.spoons,.forks{
+    display: none;
+    margin-top: 10px;
+    color: black;
+    font-size: 16px;
+    width: 240px;
+    border-radius: 30px;
+    margin-top: -24px;
+    padding: 20px;
+    background-color:#ac3030;
+    padding-top: 5px;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+}
+.desc2{
+    padding-top: 5px;
+}
+.dishes,.forks{
+    height: 110px;
+}
+
+.section1,
+.section2,
+.section3{
+    margin-bottom: 165px;
+}
+.theme{
+    width: 90px;
+    height: 20px;
+    border-radius: 20px;
+    background-color:#ac3030;
+    color: white;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-bottom: 0;
+}

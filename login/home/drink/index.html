@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Drinks</title>
+    <link id="theme-style" rel="stylesheet" href="styles.css">
+    <script>
+        function toggleTheme() {
+            const themeLink = document.getElementById('theme-style');
+            const currentTheme = themeLink.getAttribute('href');
+    
+            if (currentTheme === 'styles.css') {
+                themeLink.href = 'dark.css';
+                localStorage.setItem('selectedTheme', 'dark');
+            } else {
+                themeLink.href = 'styles.css';
+                localStorage.setItem('selectedTheme', 'light');
+            }
+        }
+    
+        window.onload = function () {
+            const savedTheme = localStorage.getItem('selectedTheme') || 'light';
+            const themeLink = document.getElementById('theme-style');
+            themeLink.href = (savedTheme === 'dark') ? 'dark.css' : 'styles.css';
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar" >
+        <div class="logo"><h1 style="color: white;">Drinks</h1></div>
+        <div class="dropdown">
+            <div class="hamburger">&#9776;</div>
+            <ul class="menu">
+              <li><a href="../home.html">🍕Home</a></li>
+               <li><a href="../payment/payment.html">🍜Payment</a></li>
+              <li><a href="../contact_us/contact.html">🍕Contact Us</a></li>
+              <!-- <li><a href="#">About Us</a></li> -->
+            </ul>
+          </div>
+    </nav>
+    <button class="theme" onclick="toggleTheme()">theme</button>
+  
+    <div class="drinks-container">
+        <!-- Main Heading -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search drinks..." class="search-input">
+          </div>
+        <div class="section-header">
+            <h2 class="section-title">Hot Drinks</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="Hot drinks-grid">
+        <!-- Hot Drinks Grid -->
+        
+            <!-- Drink 1 -->
+            <div class="drink-card">
+                <div class="drink-image">
+                    <img src="cap.jpg" alt="Cappuccino">
+                </div>
+                <div class="drink-info">
+                    <h3>Cappuccino</h3>
+                    <p>Espresso with steamed milk and foam</p>
+                    <span class="price">$4.50</span>
+                    <button class="favorite-btn">♡</button>
+                </div>
+            </div>
+            
+            <!-- Drink 2 -->
+            <div class="drink-card">
+                <div class="drink-image">
+                    <img src="latai.jpg" alt="Latte">
+                </div>
+                <div class="drink-info">
+                    <h3>Latte</h3>
+                    <p>Espresso with more steamed milk</p>
+                    <span class="price">$5.00</span>
+                    <button class="favorite-btn">♡</button>
+                    
+                </div>
+            </div>
+            
+            <!-- Drink 3 -->
+            <div class="drink-card">
+                <div class="drink-image">
+                    <img src="espressoo.jpg" alt="Espresso">
+                </div>
+                <div class="drink-info">
+                    <h3>Espresso</h3>
+                    <p>Strong concentrated coffee</p>
+                    <span class="price">$3.50</span>
+                    <button class="favorite-btn">♡</button>
+                </div>
+            </div>
+            
+            <!-- Drink 4 -->
+            <div class="drink-card">
+                <div class="drink-image">
+                    <img src="hot chocolet.jpg" alt="Hot Chocolate">
+                </div>
+                <div class="drink-info">
+                    <h3>Hot Chocolate</h3>
+                    <p>Rich chocolate drink with cream</p>
+                    <span class="price">$4.75</span>
+                    <button class="favorite-btn">♡</button>
+                </div>
+            </div>
+            
+            <!-- Drink 5 -->
+            <div class="drink-card">
+                <div class="drink-image">
+                    <img src="chai lat.jpg" alt="Chai Latte">
+                </div>
+                <div class="drink-info">
+                    <h3>Chai Latte</h3>
+                    <p>Spiced tea with steamed milk</p>
+                    <span class="price">$4.50</span>
+                    <button class="favorite-btn">♡</button>
+                </div>
+            </div>
+            
+            <!-- Drink 6 -->
+            <div class="drink-card">
+                <div class="drink-image">
+                    <img src="Tea.jpg" alt="Tea">
+                </div>
+                <div class="drink-info">
+                    <h3>Tea</h3>
+                    <p>Selection of fine teas</p>
+                    <span class="price">$3.25</span>
+                    <button class="favorite-btn">♡</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="drinks-container">
+        <!-- Main Heading -->
+        <div class="section-header">
+            <h2 class="section-title">Cold Drinks</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <!-- Cold Drinks Grid -->
+        <div class="drinks-grid">
+            <!-- Drink 1 -->
+            <div class="drink-card">
+                <div class="drink-image">
+                    <img src="Iced cofee.jpg" alt="Iced coffee">
+                </div>
+                <div class="drink-info">
+                    <h3>Iced coffee</h3>
+                    <p>Cold coffee with ice</p>
+                    <span class="price">$6.00</span>
+                    <button class="favorite-btn">♡</button>
+                </div>
+            </div>
+            
+            <!-- Drink 2 -->
+            <div class="drink-card">
+                <div class="drink-image">
+                    <img src="milkshake.jpg" alt="Milkshake">
+                </div>
+                <div class="drink-info">
+                    <h3>Milkshake</h3>
+                    <p>Cold milk and ice cream mix</p>
+                    <span class="price">$7.00</span>
+                    <button class="favorite-btn">♡</button>
+                </div>
+            </div>
+            
+            <!-- Drink 3 -->
+            <div class="drink-card">
+                <div class="drink-image">
+                    <img src="icedtea.jpg" alt="Iced tea">
+                </div>
+                <div class="drink-info">
+                    <h3>Iced tea</h3>
+                    <p>Chilled tea, sometimes with lemon or sugar</p>
+                    <span class="price">$2.50</span>
+                    <button class="favorite-btn">♡</button>
+                </div>
+            </div>
+            
+            <!-- Drink 4 -->
+            <div class="drink-card">
+                <div class="drink-image">
+                    <img src="smoothie.jpg" alt="Smoothie">
+                </div>
+                <div class="drink-info">
+                    <h3>Smoothie</h3>
+                    <p>Blended cold fruits, sometimes with milk or yogurt</p>
+                    <span class="price">$5.75</span>
+                    <button class="favorite-btn">♡</button>
+                </div>
+            </div>
+            
+            <!-- Drink 5 -->
+            <div class="drink-card">
+                <div class="drink-image">
+                    <img src="matcha.jpg" alt="Matcha">
+                </div>
+                <div class="drink-info">
+                    <h3>Matcha</h3>
+                    <p>Cold milk with matcha powder</p>
+                    <span class="price">$5.5</span>
+                    <button class="favorite-btn">♡</button>
+                </div>
+            </div>
+            
+            <!-- Drink 6 -->
+            <div class="drink-card">
+                <div class="drink-image">
+                    <img src="Mokhito.jpg" alt="Mokhito">
+                </div>
+                <div class="drink-info">
+                    <h3>Mokhito</h3>
+                    <p>Lime,mint,and soda over ice</p>
+                    <span class="price">$4.25</span>
+                    <button class="favorite-btn">♡</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Heart code
+        document.querySelectorAll('.favorite-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            this.textContent = this.classList.contains('active') ? '♥' : '♡';
+          });
+        });
+        document.getElementById('searchInput').addEventListener('input', function() {
+  const searchTerm = this.value.toLowerCase();
+  const drinkCards = document.querySelectorAll('.drink-card');
+
+  drinkCards.forEach(card => {
+    const title = card.querySelector('h3').textContent.toLowerCase();
+    const description = card.querySelector('p').textContent.toLowerCase();
+    
+    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
+    </script>
+</body>
+</html>

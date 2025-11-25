@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Italian Food</title>
+        <link id="theme-style" rel="stylesheet" href="index.css">
+        <script src="script.js"></script>
+
+    </head>
+
+    <body>
+        <nav> <span style = "color: white;">Italian Food</span>
+            <div class="dropdown">
+                <div class="hamburger">&#9776;</div>
+                <ul class="menu">
+                    <li><a href="../home.html">🍕Home</a></li>
+                     <li><a href="../payment/payment.html">🍜Payment</a></li>
+                    <li><a href="../contact_us/contact.html">🍕Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <button class="theme" onclick="toggleTheme()">theme</button>
+        <div class="cont">
+            <div class="pizza" onmouseenter="show_price(this,' price: 15$')" onmouseleave="hide_price(this)">
+                <img class="img" src="pizza.jpg" alt="pizza" >
+                <p>Marghreta</p>
+                <p> Ingredients: Thin Crust,Tomato Sauce,Mozarella Cheese.</p>
+                <span class="tooltip">Price: 15$</span>
+            </div>
+            <div class="pasta" onmouseenter="show_price(this,' price: 10$')" onmouseleave="hide_price(this)">
+                <img class="img" src="pasta.jpg" alt="pasta" >
+                <p>Pasta</p>
+                <p>Ingredients: Spaghetti,Olive Oil,Tomato Sauce,Garlic.
+                </p>
+                <span class="tooltip">Price: 10$</span>
+
+            </div>
+            <div id="box" class="lasagna" onmouseenter="show_price(this,' price: 15$')" onmouseleave="hide_price(this)">
+                <img class="img" src="lasagna.jpg" alt="lasagna" >
+                <p>Lasagna</p>
+                <p>Ingredients:Lasagna Noodles,Ricotta Cheese,Ground Beef</p>
+                <span class="tooltip">Price: 15$</span>
+            </div>
+            <div id="box" class="Spaghetti" onmouseenter="show_price(this,' price: 20$')"
+                onmouseleave="hide_price(this)">
+                <img class="img" src="spaghetti2.jpg" alt="spaghetti" >
+                <p>Spaghetti</p>
+                <p>Ingredients:Spaghetti Noodles,Tomato Sauce,Parmesan Cheese</p>
+                <span class="tooltip">Price: 20$</span>
+            </div>
+
+            <div id="box" class="steak" onmouseenter="show_price(this,' price: 30$')" onmouseleave="hide_price(this)">
+                <img class="img" src="steak.jpg" alt="steak" >
+                <p>Steak With Mushroom Sauce</p>
+                <p> Ingredients: Beef Steak,Olive Oil,Garlic,Mushroom.</p>
+                <span class="tooltip">Price: 30$</span>
+            </div>
+            <div id="box" class="alfredo" onmouseenter="show_price(this,' price: 25$')" onmouseleave="hide_price(this)">
+                <img class="img" src="alfredo.jpg" alt="alfredo" >
+                <p>Alfredo Pasta</p>
+                <p> Ingredients: Fettuccine Noodles,Cream,Parmesan Cheese.</p>
+                <span class="tooltip">Price: 25$</span>
+            </div>
+            <div id="box" class="chic" onmouseenter="show_price(this,' price: 28$')" onmouseleave="hide_price(this)">
+                <img class="img" src="chic.jpg" alt="chicken" >
+                <p> Grilled chicken with vegetables</p>
+                <p> Ingredients: Chicken Breast,Olive Oil,Vegetables.</p>
+                <span class="tooltip">Price: 28$</span>
+            </div>
+            <div id="box" class="salamon" onmouseenter="show_price(this,' price: 35$')" onmouseleave="hide_price(this)">
+                <img class="img" src="salamon.jpg" alt="salamon" >
+                <p> Creamy Garlic Salamon With Mushroom </p>
+                <p> Ingredients: Salamon,Garlic,Mushroom,Cooking cream.</p>
+                <span class="tooltip">Price: 35$</span>
+            </div>
+            <div id="box" class="salad" onmouseenter="show_price(this,' price: 8$')" onmouseleave="hide_price(this)">
+                <img class="img" src="salad.jpg" alt="salad" >
+                <p> Italian Salad</p>
+                <p> Ingredients: Lettuce,Tomato,Cucumber,Olive Oil,Basil.</p>
+                <span class="tooltip">Price: 8$</span>
+            </div>
+        </div>
+    </body>
+
+</html>

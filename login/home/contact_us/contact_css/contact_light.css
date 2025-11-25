@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    background-color:#f9e0e0 ;
+
+}
+.cont {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+input[type=button] {
+    justify-content: end;
+    border: none;
+    outline: none;
+    height: 20px;
+    width: 90px;
+    font-size: 15px;
+    background: #ac3030;
+    color: white;
+    border-radius: 15px;
+    margin: 25px;
+    margin-right: 50px;
+    transition: 0.5s ease;
+   
+}
+
+input[type=button]:hover {
+    transform: scale(1.1);
+}
+
+.cotanre{
+    width: 750px;
+    height: 550px;
+    padding: 0px 50px;
+    position: absolute;
+    border-radius:0 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    background: rgba(201, 113, 113, 0.6);
+    
+}
+p{
+    color:#721111;
+    font-size: 45px;
+    padding: 0 200px;
+}
+.cotanre label {
+    color:#721111;
+    font-size: large;
+}
+
+.cotanre input {
+    width: 100%;
+    margin: 10px 0;
+
+}
+
+.cotanre input[type=text],
+.cotanre input[type=email] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: transparent;
+    color: #721111;
+    border-bottom: 1px solid white;
+    font-size: 18px;
+}
+.cotanre input[type=submit] {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 18px;
+    background: #ac3030;
+    color:white;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    transition: 0.5s ease;
+}
+
+.cotanre input[type=submit]:hover {
+    transform: scale(1.1);
+}
+.theme{
+    width: 90px;
+    height: 20px;
+    border-radius: 20px;
+    background-color:#ac3030;
+    color: white;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 0;
+}

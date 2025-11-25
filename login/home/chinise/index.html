@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Flip Card</title>
+    <link id="theme-style" rel="stylesheet" href="style.css">
+    <script>
+      function toggleTheme() {
+        const themeLink = document.getElementById('theme-style');
+        const currentTheme = themeLink.getAttribute('href');
+
+        if (currentTheme === 'style.css') {
+          themeLink.href = 'dark.css';
+          localStorage.setItem('selectedTheme', 'dark');
+        } else {
+          themeLink.href = 'style.css';
+          localStorage.setItem('selectedTheme', 'light');
+        }
+      }
+
+      window.onload = function () {
+        const savedTheme = localStorage.getItem('selectedTheme') || 'light';
+        const themeLink = document.getElementById('theme-style');
+        themeLink.href = (savedTheme === 'dark') ? 'dark.css' : 'style.css';
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">Chinese section</div>
+      <div class="dropdown">
+        <div class="hamburger">&#9776;</div>
+        <ul class="menu">
+          <li><a href="../home.html">🍕Home</a></li>
+           <li><a href="../payment/payment.html">🍜Payment</a></li>
+          <li><a href="../contact_us/contact.html">🍕Contact Us</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+    <button class="theme" onclick="toggleTheme()">theme</button>
+
+    <div class="cards-container">
+
+      <div class="flip-card">
+        <h3 class="card-title">Bao buns </h3>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/bao-buns/Vegan bao buns with tofu and mushrooms‏.jpg" alt="bao buns " />
+          </div>
+          <div class="flip-card-back">
+            <div class="card-content">
+              <p>- Fluffy buns filled with braised pork belly,
+                hoisin, cucumber, scallions (or chicken/mushrooms
+                for veggie option)<br>
+                $7.50 </p>
+
+              <button class="button" onclick="openOptions(this)">Special Order</button>
+
+              <div class="options-modal">
+                <label><input type="checkbox" value="Fries"> Fries</label>
+                <label><input type="checkbox" value="Bread"> Bread</label>
+                <label><input type="checkbox" value="Juice"> Juice</label>
+                <label><input type="checkbox" value="Salad"> Salad</label>
+                <button class="button2" onclick="confirmOptions(this)">Confirm</button>
+              </div>
+
+              <div class="selected-options"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <h3 class="card-title">Biang-biang-noodles</h3>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/biang-biang/biang-biang-noodles.jpg" alt="biang-biang-noodles" />
+          </div>
+          <div class="flip-card-back">
+            <div class="card-content">
+              <p>- Hand-pulled wide noodles tossed in fiery chili oil,
+                garlic, and your choice of beef or tofu<br>
+                $12.00 </p>
+
+              <button class="button" onclick="openOptions(this)">Special Order</button>
+
+              <div class="options-modal">
+                <label><input type="checkbox" value="Fries"> Fries</label>
+                <label><input type="checkbox" value="Bread"> Bread</label>
+                <label><input type="checkbox" value="Juice"> Juice</label>
+                <label><input type="checkbox" value="Salad"> Salad</label>
+                <button class="button2" onclick="confirmOptions(this)">Confirm</button>
+              </div>
+
+              <div class="selected-options"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <h3 class="card-title">Chow-mein</h3>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/chow-mein/Chow_mein_with_shrimps_and_meat_with_a_choy_and_Choung.jpg" alt="chow-mein" />
+          </div>
+          <div class="flip-card-back">
+            <div class="card-content">
+              <p>- Wokfried noodles with chicken/pork/shrimp,
+                bell peppers, onions, and soy glaze<br>
+                $11.50</p>
+
+              <button class="button" onclick="openOptions(this)">Special Order</button>
+
+              <div class="options-modal">
+                <label><input type="checkbox" value="Fries"> Fries</label>
+                <label><input type="checkbox" value="Bread"> Bread</label>
+                <label><input type="checkbox" value="Juice"> Juice</label>
+                <label><input type="checkbox" value="Salad"> Salad</label>
+                <button class="button2" onclick="confirmOptions(this)">Confirm</button>
+              </div>
+
+              <div class="selected-options"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <h3 class="card-title">Fried-Rice</h3>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/fried-rice/Chinese-Fried-Rice-1.jpg" alt="Fried-Rice" />
+          </div>
+          <div class="flip-card-back">
+            <div class="card-content">
+              <p>- Wok-tossed jasmine rice with eggs, peas,
+                carrots, and choice of protein (chicken/shrimp/pork)<br>
+                $10.50</p>
+
+              <button class="button" onclick="openOptions(this)">Special Order</button>
+
+              <div class="options-modal">
+                <label><input type="checkbox" value="Fries"> Fries</label>
+                <label><input type="checkbox" value="Bread"> Bread</label>
+                <label><input type="checkbox" value="Juice"> Juice</label>
+                <label><input type="checkbox" value="Salad"> Salad</label>
+                <button class="button2" onclick="confirmOptions(this)">Confirm</button>
+              </div>
+
+              <div class="selected-options"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <h3 class="card-title">Kung-Pao</h3>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/kung-pao/Kung-Pao-Chicken.jpg" alt="Kung-Pao" />
+          </div>
+          <div class="flip-card-back">
+            <div class="card-content">
+              <p>-Tender chicken, peanuts, bell peppers,
+                and dried chilies in a sweet-spicy sauce<br>
+                $14.00</p>
+
+              <button class="button" onclick="openOptions(this)">Special Order</button>
+
+              <div class="options-modal">
+                <label><input type="checkbox" value="Fries"> Fries</label>
+                <label><input type="checkbox" value="Bread"> Bread</label>
+                <label><input type="checkbox" value="Juice"> Juice</label>
+                <label><input type="checkbox" value="Salad"> Salad</label>
+                <button class="button2" onclick="confirmOptions(this)">Confirm</button>
+              </div>
+
+              <div class="selected-options"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <h3 class="card-title">Lamian</h3>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/lamian/兰州牛肉面-lamian.jpg" alt="lamian" />
+          </div>
+          <div class="flip-card-back">
+            <div class="card-content">
+              <p>-Chewy hand-pulled noodles in rich beef broth
+                with greens and sliced brisket (vegetable broth available)<br>
+                $13.00</p>
+
+              <button class="button" onclick="openOptions(this)">Special Order</button>
+
+              <div class="options-modal">
+                <label><input type="checkbox" value="Fries"> Fries</label>
+                <label><input type="checkbox" value="Bread"> Bread</label>
+                <label><input type="checkbox" value="Juice"> Juice</label>
+                <label><input type="checkbox" value="Salad"> Salad</label>
+                <button class="button2" onclick="confirmOptions(this)">Confirm</button>
+              </div>
+
+              <div class="selected-options"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <h3 class="card-title">Mapo-tofu</h3>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/mapo-tofu/Mapo-Tofu_1.jpg" alt="mapo-tofu" />
+          </div>
+          <div class="flip-card-back">
+            <div class="card-content">
+              <p>-Silken tofu in numbing Sichuan chili sauce
+                with ground pork (vegan option: mushroom mince)<br>
+                $12.50</p>
+
+              <button class="button" onclick="openOptions(this)">Special Order</button>
+
+              <div class="options-modal">
+                <label><input type="checkbox" value="Fries"> Fries</label>
+                <label><input type="checkbox" value="Bread"> Bread</label>
+                <label><input type="checkbox" value="Juice"> Juice</label>
+                <label><input type="checkbox" value="Salad"> Salad</label>
+                <button class="button2" onclick="confirmOptions(this)">Confirm</button>
+              </div>
+
+              <div class="selected-options"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <h3 class="card-title">Moo-shu</h3>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/moo-shu/Moo-Shu-Pork-17.jpg" alt="moo-shu" />
+          </div>
+          <div class="flip-card-back">
+            <div class="card-content">
+              <p>-Stir-fried pork, cabbage, and eggs with hoisin,
+                served with steamed pancakes<br>
+                $15.00</p>
+
+              <button class="button" onclick="openOptions(this)">Special Order</button>
+
+              <div class="options-modal">
+                <label><input type="checkbox" value="Fries"> Fries</label>
+                <label><input type="checkbox" value="Bread"> Bread</label>
+                <label><input type="checkbox" value="Juice"> Juice</label>
+                <label><input type="checkbox" value="Salad"> Salad</label>
+                <button class="button2" onclick="confirmOptions(this)">Confirm</button>
+              </div>
+
+              <div class="selected-options"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <h3 class="card-title">Peking-Duck</h3>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/peking-duck/peking-duck.jpg" alt="peking-duck" />
+          </div>
+          <div class="flip-card-back">
+            <div class="card-content">
+              <p>-Crispy roasted duck with hoisin, scallions,
+                cucumber, and thin pancakes<br>
+                $28.00</p>
+
+              <button class="button" onclick="openOptions(this)">Special Order</button>
+
+              <div class="options-modal">
+                <label><input type="checkbox" value="Fries"> Fries</label>
+                <label><input type="checkbox" value="Bread"> Bread</label>
+                <label><input type="checkbox" value="Juice"> Juice</label>
+                <label><input type="checkbox" value="Salad"> Salad</label>
+                <button class="button2" onclick="confirmOptions(this)">Confirm</button>
+              </div>
+
+              <div class="selected-options"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <h3 class="card-title">SPRING-ROLLS</h3>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/spring-roll/VEGETABLE-SPRING-ROLLS.jpg" alt="SPRING-ROLLS" />
+          </div>
+          <div class="flip-card-back">
+            <div class="card-content">
+              <p>-Crispy rolls stuffed with cabbage, carrots,
+                and shrimp/pork, served with sweet chili sauce<br>
+                $6.00</p>
+
+              <button class="button" onclick="openOptions(this)">Special Order</button>
+
+              <div class="options-modal">
+                <label><input type="checkbox" value="Fries"> Fries</label>
+                <label><input type="checkbox" value="Bread"> Bread</label>
+                <label><input type="checkbox" value="Juice"> Juice</label>
+                <label><input type="checkbox" value="Salad"> Salad</label>
+                <button class="button2" onclick="confirmOptions(this)">Confirm</button>
+              </div>
+
+              <div class="selected-options"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      function openOptions(button) {
+        const container = button.closest('.card-content');
+        const modal = container.querySelector('.options-modal');
+        if (modal) {
+          modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
+        }
+      }
+
+      function confirmOptions(confirmButton) {
+        const modal = confirmButton.closest('.options-modal');
+        const checkboxes = modal.querySelectorAll('input[type="checkbox"]');
+        const selected = [];
+
+        checkboxes.forEach(cb => {
+          if (cb.checked) selected.push(cb.value);
+        });
+
+        const container = modal.closest('.card-content');
+        const display = container.querySelector('.selected-options');
+
+        if (selected.length > 0) {
+          display.innerText = "Add: " + selected.join(' , ');
+        } else {
+          display.innerText = "";
+        }
+
+        modal.style.display = 'none';
+      }
+    </script>
+
+  </body>
+
+</html>

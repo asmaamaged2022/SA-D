@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>login page</title>
+        <link id="theme-style" rel="stylesheet" href="log_css/log_light.css">
+
+    </head>
+
+    <body>
+        <button class="theme" onclick="toggleTheme()">theme</button>
+        <script>
+            function toggleTheme() {
+                const themeLink = document.getElementById('theme-style');
+                const currentTheme = themeLink.getAttribute('href');
+
+                if (currentTheme === 'log_css/log_light.css') {
+                    themeLink.href = 'log_css/log_dark.css';
+                    localStorage.setItem('selectedTheme', 'dark');
+                } else {
+                    themeLink.href = 'log_css/log_light.css';
+                    localStorage.setItem('selectedTheme', 'light');
+                }
+            }
+
+            window.onload = function () {
+                const savedTheme = localStorage.getItem('selectedTheme') || 'light';
+                const themeLink = document.getElementById('theme-style');
+                themeLink.href = (savedTheme === 'dark') ? 'log_css/log_dark.css' : 'log_css/log_light.css';
+            }
+        </script>
+
+        <div class="box">
+            <h1>login page</h1>
+            <form  action="home/home.html">
+                <label>username</label>
+                <input type="text" placeholder="enter your name" required>
+                <label>password</label>
+                <input type="password" placeholder="enter your password" required>
+                <input id="myButton" type="submit" value="login">
+            </form>
+
+
+
+
+
+        </div>
+    </body>
+
+</html>

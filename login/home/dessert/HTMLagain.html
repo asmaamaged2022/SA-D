@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link id="theme-style" rel="stylesheet" href="cssdark.css">
+        <script src="javs.js"></script>
+        <title>Paradise' Restaurant</title>
+        <script>
+            function toggleTheme() {
+                const themeLink = document.getElementById('theme-style');
+                const currentTheme = themeLink.getAttribute('href');
+
+                if (currentTheme === 'CSSagain.css') {
+                    themeLink.href = 'cssdark.css';
+                    localStorage.setItem('selectedTheme', 'dark');
+                } else {
+                    themeLink.href = 'CSSagain.css';
+                    localStorage.setItem('selectedTheme', 'light');
+                }
+            }
+
+            window.onload = function () {
+                const savedTheme = localStorage.getItem('selectedTheme') || 'light';
+                const themeLink = document.getElementById('theme-style');
+                themeLink.href = (savedTheme === 'dark') ? 'cssdark.css' : 'CSSagain.css';
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <div id="naviBar">
+                <b style="color: white;font-size: 20px;">desserts</b>
+                <div class="dropdown">
+                    <div class="hamburger">&#9776;</div>
+                    <ul class="menu">
+                        <li><a href="../home.html">🍕Home</a></li>
+                         <li><a href="../payment/payment.html">🍜Payment</a></li>
+                        <li><a href="../contact_us/contact.html">🍕Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="but"><button class="theme" onclick="toggleTheme()">theme</button></div>
+
+        <div class="sec1">
+
+            <h3 id="firstSec" title="Ramadan karem">season's desserts</h3>
+            <div class="season-box">
+                <div class="box">
+                    <div class="img-container"> <img src="Qatayef.jpg" class="box-img" /> </div>
+                    <div class="Name"><b>Qatayef</b></div>
+                    <ol class="detailes-l">
+                        <li>small:50</li>
+                        <li>mediem:70</li>
+                        <li>large:100</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <div class="img-container"> <img src="Zalabia.jpg" class="box-img" /> </div>
+                    <div class="Name"><b>Zalabia</b></div>
+                    <ol class="detailes-l">
+                        <li>small:60</li>
+                        <li>mediem:80</li>
+                        <li>large:120</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <div class="img-container"> <img src="kunafeh.jpg" class="box-img" /> </div>
+                    <div class="Name"><b>kunafeh</b></div>
+                    <ol class="detailes-l">
+                        <li>small:100</li>
+                        <li>mediem:150</li>
+                        <li>large:180</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <div class="img-container"> <img src="baklava.jpg" class="box-img" /> </div>
+                    <div class="Name"><b>baklava</b></div>
+                    <ol class="detailes-l">
+                        <li>small:120</li>
+                        <li>mediem:180</li>
+                        <li>large:210</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="sec2">
+            <h3>Western desserts</h3>
+            <div class="Western-box">
+                <div class="box">
+                    <div class="img-container"> <img src="jjamTart.jpg" class="box-img" /> </div>
+                    <div class="Name"><b>Jam Tart</b></div>
+                    <ol class="detailes-l">
+                        <li>small:150</li>
+                        <li>mediem:170</li>
+                        <li>large:190</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <div class="img-container"> <img src="IceCream.jpg" class="box-img" /> </div>
+                    <div class="Name"><b>Ice Cream</b></div>
+                    <ol class="detailes-l">
+                        <li>small:20</li>
+                        <li>mediem:40</li>
+                        <li>large:60</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <div class="img-container"> <img src="macronnnnnn.jpg" class="box-img" /> </div>
+                    <div class="Name"><b>Macron</b></div>
+                    <ol class="detailes-l">
+                        <li>small:110</li>
+                        <li>mediem:150</li>
+                        <li>large:190</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <div class="img-container"> <img src="ccupcake.jpg" class="box-img" /> </div>
+                    <div class="Name"><b>Cup Cake</b></div>
+                    <ol class="detailes-l">
+                        <li>small:100</li>
+                        <li>mediem:130</li>
+                        <li>large:160</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="sec3">
+            <h3>Eastern desserts</h3>
+            <div class="Eastern-box">
+                <div class="box">
+                    <div class="img-container"> <img src="Mshabek.jpg" class="box-img" /> </div>
+                    <div class="Name"><b>Mshabek</b></div>
+                    <ol class="detailes-l">
+                        <li>small:40</li>
+                        <li>mediem:70</li>
+                        <li>large:90</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <div class="img-container"> <img src="RemoshElSett.jpg" class="box-img" /> </div>
+                    <div class="Name"><b>RemoshElSett</b></div>
+                    <ol class="detailes-l">
+                        <li>small:60</li>
+                        <li>mediem:80</li>
+                        <li>large:100</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <div class="img-container"> <img src="Milk&Rice.jpg" class="box-img" /> </div>
+                    <div class="Name"><b>Milk&Rice</b></div>
+                    <ol class="detailes-l">
+                        <li>small:30</li>
+                        <li>mediem:50</li>
+                        <li>large:60</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <div class="img-container"> <img src="MiddleEasternChurros.jpg" class="box-img" /> </div>
+                    <div class="Name"><b>MiddleEasternChurros</b></div>
+                    <ol class="detailes-l">
+                        <li>small:40</li>
+                        <li>mediem:60</li>
+                        <li>large:80</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <button id="Top" title="Go to top"><span style="font-size:24px;">&#9650;</span></button>
+
+    </body>
+
+</html>

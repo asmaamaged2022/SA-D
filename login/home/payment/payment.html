@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="theme-style" rel="stylesheet" href="pay_light.css" />
+    <title>Payment</title>
+    <script>
+      function toggleTheme() {
+        const themeLink = document.getElementById("theme-style");
+        const currentTheme = themeLink.getAttribute("href");
+
+        if (currentTheme === "pay_light.css") {
+          themeLink.href = "pay_dark.css";
+          localStorage.setItem("selectedTheme", "dark");
+        } else {
+          themeLink.href = "pay_light.css";
+          localStorage.setItem("selectedTheme", "light");
+        }
+      }
+
+      window.onload = function () {
+        const savedTheme = localStorage.getItem("selectedTheme") || "light";
+        const themeLink = document.getElementById("theme-style");
+        themeLink.href =
+          savedTheme === "dark" ? "pay_dark.css" : "pay_light.css";
+      };
+    </script>
+  </head>
+  <body>
+    <div class="payment">
+      <div class="cont">
+        <button class="theme" onclick="toggleTheme()">theme</button>
+        <input id="myButton" type="button" value="Home" />
+      </div>
+    </div>
+    <div class="cotanre" id="cotanre">
+      <form>
+        <p>delivery</p>
+        <label>Phone number</label>
+        <input type="tel" placeholder="enter your number" required />
+        <label>Address</label>
+        <input type="text" placeholder="enter your Address" required />
+        <input type="submit" value="Cash" />
+        <button type="button" onclick="func()">visa</button>
+        <div class="visa" id="visa">
+          <label>visa number</label>
+          <input type="password" placeholder="enter your visa number" />
+          <input type="submit" value="done" />
+        </div>
+      </form>
+    </div>
+    <script>
+      function func() {
+        console.log("Clicked!");
+        let box = document.getElementById("visa");
+        let x = document.getElementById("cotanre");
+        let current = window.getComputedStyle(box).display;
+        console.log("Current display:", current);
+        if (current === "none") {
+          box.style.display = "block";
+          x.style.height = "650px";
+          let visaInput = box.querySelector('input[type="password"]');
+          if (visaInput) {
+            visaInput.setAttribute("required", "required");
+          }
+        } else {
+          box.style.display = "none";
+          x.style.height = "500px";
+          let visaInput = box.querySelector('input[type="password"]');
+          if (visaInput) {
+            visaInput.removeAttribute("required");
+          }
+        }
+      }
+      document
+        .getElementById("myButton")
+        .addEventListener("click", function () {
+          window.location.href = "../home.html";
+        });
+    </script>
+  </body>
+</html>

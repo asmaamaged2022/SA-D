@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+     <meta http-equiv="refresh" content="100">
+     <title> levant food</title>
+     <link id="theme-style" rel="stylesheet" href="levant style.css">
+
+ <script>
+  function showDescription(desc1){
+    var desc1 = document.getElementById(desc1);
+    if(desc1.style.visibility === "hidden" || desc1.style.visibility ===""){
+        desc1.style.visibility = "visible";
+    }
+    else{
+        desc1.style.visibility = "hidden";
+    }
+  }
+ </script>
+ <script>
+  function toggleTheme() {
+      const themeLink = document.getElementById('theme-style');
+      const currentTheme = themeLink.getAttribute('href');
+
+      if (currentTheme === 'levant style.css') {
+          themeLink.href = 'levant_dark.css';
+          localStorage.setItem('selectedTheme', 'dark');
+      } else {
+          themeLink.href = 'levant style.css';
+          localStorage.setItem('selectedTheme', 'light');
+      }
+  }
+
+  window.onload = function () {
+      const savedTheme = localStorage.getItem('selectedTheme') || 'light';
+      const themeLink = document.getElementById('theme-style');
+      themeLink.href = (savedTheme === 'dark') ? 'levant_dark.css' : 'levant style.css';
+  }
+</script>
+
+</head>
+<body>
+
+  <header>
+      <!-- <a href="#" class="logo"> levant Food</a> -->
+       <p class="logo">levant Food</p>
+       <div class="dropdown">
+        <div class="hamburger">&#9776;</div>
+        <ul class="menu">
+          <li><a href="../home.html">🍕Home</a></li>
+           <li><a href="payment/payment.html">🍜Payment</a></li>
+          <li><a href="../contact_us/contact.html">🍕Contact Us</a></li>
+          
+          <!-- <li><a href="#">About Us</a></li> -->
+        </ul>
+      </div>
+  </header>
+  <button class="theme" onclick="toggleTheme()">theme</button>
+  <h2 class="appetizers">Appetizers</h2>
+    <div class="section1" >
+        <div id="img1"> 
+         <img src="images/photo_2025-04-19_14-20-30.jpg" alt="kibbeh" onclick="showDescription('desc1')">
+         <p id="desc1" class="desc1"> 
+           <bold>Lebanese Kibbeh</bold> 
+            <br>
+            ingredients: ground meat,bulgur wheat,onions,spices,pine nuts
+            <br>
+            <br>
+            small:10$
+            <br>
+            medium:15$ 
+            <br>
+            large:20$
+         </p>
+        </div> 
+        <div id="img2">
+          <img src="images/hummus.jpg" alt="hummus" onclick="showDescription('desc2')">
+          <p id="desc2" class="desc2">
+           <bold>Hummus</bold> 
+            <br>
+            ingredients: chickpeans,tahini,lemon juice,garlic,spices,olive oli
+            <br>
+            <br>
+            small:5$
+            <br>
+            medium:10$ 
+            <br>
+            large:15$
+          </p>
+        </div>
+    </div>
+    <div class="section2">
+        <div id="img3">
+          <img src="images/tabula.jpg" alt="tabula" onclick="showDescription('desc3')">.
+          <p id="desc3" class="desc3">
+           <bold>Tabula</bold> 
+           <br>
+           ingredients: parsley,mint,onions,tomatoes,  bulgur wheat,olive oil,lemon juice,spices
+            <br>
+            <br>
+            small:7$
+            <br>
+            medium:13$ 
+            <br>
+            large:19$
+          </p>
+        </div> 
+        <div id="img4">
+          <img src="images/photo_2025-04-21_09-08-14.jpg" alt="yalanji" onclick="showDescription('desc4')">.
+          <p id="desc4" class="desc4">
+           <bold>Yalanji</bold> 
+            <br>
+            ingredients:rice,grape leaves,tomatoes,onions,parsley,  mint,  olive oil,lemon juice,spices
+            <br>
+            <br>
+            small:10$
+            <br>
+            medium:15$ 
+            <br>
+            large:20$ 
+          </p>
+        </div> 
+    </div>
+    <div class="section3">
+       <div id="img5">
+          <img src="images/manaqish.jpg" alt="manakish" onclick="showDescription('desc5')">.
+          <p id="desc5" class="desc5">
+           <bold>Manakish</bold> 
+            <br>
+            ingredients:flatbread topped with zaatar and cheese or meat and vegetables
+            <br>
+            <br>
+            small:15$
+            <br>
+            medium:20$ 
+            <br>
+            large:25$
+          </p>
+        </div>
+        <div id="img6">
+          <img src="images/mtabal.jpg" alt="mtabal" onclick="showDescription('desc6')">.
+          <p id="desc6" class="desc6">
+           <bold>Mtabal</bold> 
+            <br>
+            ingredients: roasted eggplant,tahini,garlic,lemon juice,olive oil,yogurt,spices
+            <br>
+            <br>
+            small:5$
+            <br>
+            medium:10$ 
+            <br>
+            large:15$
+          </p>
+        </div>
+    </div>
+  <h2 class="main-course">Main Course</h2>
+    <div class="section4">
+        <div id="img7">
+          <img src="images/photo_2025-04-19_14-20-22.jpg" alt="musakhan" onclick="showDescription('desc7')">
+          <p id="desc7" class="desc7">
+           <bold>Palestinian Musakhan</bold> 
+            <br>
+            ingredients: chicken,onions,olive oil,sumac,taboon bread,pine nuts
+            <br>
+            <br>
+            small:30$
+            <br>
+            medium:45$ 
+            <br>
+            large:50$
+          </p>
+        </div>
+        <div id="img8">
+          <img src="images/photo_2025-04-19_14-20-35.jpg" alt="kusa blaban" onclick="showDescription('desc8')">
+          <p id="desc8" class="desc8">
+           <bold>Syrian Kusa blaban</bold> 
+            <br>
+            ingredients: zucchini,ground meat,rice,garlic,mint,yogurt,spices,   pine nuts
+            <br>
+            <br>
+            small:20$
+            <br>
+            medium:35$ 
+            <br>
+            large:45$
+          </p>
+        </div>
+    </div>
+    <div class="section5">
+        <div id="img9">
+          <img src="images/photo_2025-04-19_14-20-49.jpg" alt="mansaf" onclick="showDescription('desc9')">
+          <p id="desc9" class="desc9">
+            <bold>Jordanian Mansaf</bold>
+            <br>
+            ingredients: lamb,jameed,rice,shrak bread,parsley,almonds and pine nuts
+            <br>
+            <br>
+            small:25$
+            <br>
+            medium:40$ 
+            <br>
+            large:55$
+          </p>
+        </div>
+        <div id="img10">
+          <img src="images/makluba.jpg" alt="maqluba" onclick="showDescription('desc10')">
+          <p id="desc10" class="desc10">
+           <bold>Palestinian Maqluba</bold> 
+            <br>
+            ingredients: chicken or lamb,rice, fried vegetables like potatoes,eggplantand cauliflower,spices,toasted nuts<br>
+            <br>
+            small:25$
+            <br>
+            medium:35$ 
+            <br>
+            large:50$
+          </p>
+        </div>
+    </div>
+    <div class="section6">
+        <div id="img11">
+          <img src="images/mujaddara.jpg" alt="mujaddara" onclick="showDescription('desc11')"> 
+          <p id="desc11" class="desc11">
+           <bold> Palestinian Mujaddara</bold> 
+            <br>
+            ingredients: lentils mixed with riceor bulgur,carmalized and fried onions,olive oil, spices
+            <br>
+            <br>
+            small:15$
+            <br>
+            medium:25$ 
+            <br>
+            large:35$
+          </p>
+        </div>
+        <div id="img12">
+          <img src="images/shawarma2.jpg" alt=" shawarma" onclick="showDescription('desc12')"> 
+          <p id="desc12" class="desc12">
+           <bold>Syrian Shawarma</bold> 
+            <br>
+            ingredients: chicken,beaf or lamb,spices,pickles,vegetables,  flatbread,tahini sauce,garlic sauce
+            <br>
+            <br>
+            small:10$
+            <br>
+            medium:15$ 
+            <br>
+            large:20$
+            <br>
+          </p>
+        </div>
+    </div>
+    
+</body>
+</html>
