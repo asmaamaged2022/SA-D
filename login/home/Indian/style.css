@@ -190,3 +190,18 @@ body{
     transform: scale(1.05);
     opacity: 0.9;
 }
+
+    .add-to-cart {
+    position: absolute;
+    right: 10px;
+    top: 10px;    
+    font-size: 22px;
+    cursor: pointer;
+    padding: 5px 8px;
+    transform: none;  
+} 
+
+
+.desc2, .foods, .meals, .dishes, .spoons, .forks {
+    position: relative;   
+}

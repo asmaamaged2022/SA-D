@@ -150,27 +150,6 @@ body {
 }
 
 
-/* Basic heart button styling */
-.favorite-btn {
-    background: none;
-    border: none;
-    font-size: 25px;
-    cursor: pointer;
-    color: #721111;
-    transition: transform 0.2s;
-}
-
-/* Active (favorited) state */
-.favorite-btn.active {
-    color: red;
-    /* Filled heart color */
-}
-
-/* Hover effect */
-.favorite-btn:hover {
-    transform: scale(1.2);
-}
-
 .search-container {
     margin: 20px auto;
     max-width: 500px;
@@ -212,4 +191,10 @@ body {
 .coming-soon:hover {
     transform: scale(1.05);
     opacity: 0.9;
+}
+
+
+.add-to-cart {
+    cursor: pointer;
+    font-size: 25px; 
 }

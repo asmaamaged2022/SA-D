@@ -26,6 +26,15 @@
           const themeLink = document.getElementById('theme-style');
           themeLink.href = (savedTheme === 'dark') ? 'indian_dark.css' : 'style.css';
       }
+
+        function toggleCart(el) {
+           if (el.textContent === "🛒") {
+           el.textContent = "✔";
+         } else {
+           el.textContent = "🛒";
+         }
+      }
+
   </script>
    <div class="container">
       <div class="navbar">
@@ -46,6 +55,7 @@
            <img class="indian" src="images/Chicken Keema Masala Recipe.jpeg" onclick="showDescription('fork')">
            <p id="fork" class="forks">
             <br>Chicken Keema Masala 
+            <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
             <br>Small 20$
             <br>Medium  30$
             <br>Large 50$
@@ -61,6 +71,7 @@
             <img class="indian" src="images/Creamy & Spiced Chicken Tikka Masala.jpeg" onclick="showDescription('spoon')">
             <p id="spoon" class="spoons">
                <br>Creamy & Spiced Chicken Tikka Masala
+               <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                <br>Small  15$
                <br>Medium 25$
                <br>Large  40$
@@ -76,6 +87,7 @@
              <img class="indian" src="images/Paneer pulao or paneer rice (1).jpeg" onclick="showDescription('dish')">
              <p id="dish" class="dishes">
                <br>Paneer pulao
+               <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                <br> Small  10$
                <br>Medium  25$
                <br> Large  35$
@@ -91,6 +103,7 @@
               <img class="indian" src="images/Rogan Josh - Indian Food Photography.jpeg" onclick="showDescription('meal')">
               <p id="meal" class="meals">
                <br>Rogan Josh
+               <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                <br>Small  15$
                <br>Medium  30$
                <br>Large   45$
@@ -104,6 +117,7 @@
              <img class="indian" src="images/foooo.jpeg" onclick="showDescription('food')">
              <p id="food" class="foods">
                <br>Chicken Tikka Masala
+               <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                <br> Small  20$
                <br> Medium  30$
                <br> Large  40$
@@ -116,6 +130,7 @@
             <img class="indian" src="images/Crispy Masala Dosa.jpeg" onclick="showDescription('desc')">
             <p id="desc" class="desc2">
                <br> Crispy Masala dose
+               <span class="add-to-cart" onclick="toggleCart(this)">🛒</span>
                <br>Small    10$
                <br>Medium   20$
                <br>Large    30$
