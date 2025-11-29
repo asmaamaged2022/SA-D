@@ -46,6 +46,8 @@
         <div class="visa" id="visa">
           <label>visa number</label>
           <input type="password" placeholder="enter your visa number" />
+           <label>visa password</label>
+          <input type="password" placeholder="enter your visa password" />
           <input type="submit" value="done" />
         </div>
       </form>
@@ -59,7 +61,7 @@
         console.log("Current display:", current);
         if (current === "none") {
           box.style.display = "block";
-          x.style.height = "650px";
+          x.style.height = "680px";
           let visaInput = box.querySelector('input[type="password"]');
           if (visaInput) {
             visaInput.setAttribute("required", "required");
